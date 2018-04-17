@@ -9,6 +9,7 @@
     <PackageReference Include="Xam.Plugin.Geolocator" Version="4.2.0" />
     <PackageReference Include="Xamarin.Forms" Version="2.5.1.444934" />
     <PackageReference Include="Xamarin.Forms.Maps" Version="2.5.1.444934" />
+    <PackageReference Include="Xamarin.GooglePlayServices" Version="27.0.0" />
   </ItemGroup>
 
   <ItemGroup>

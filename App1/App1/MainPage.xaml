@@ -5,12 +5,12 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
              x:Class="App1.MainPage">
 
-    <Grid>
+    <Grid RowSpacing="1" ColumnSpacing="1">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="20" />
-            <RowDefinition Height="20" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -23,58 +23,67 @@
             Grid.Row="0" Grid.Column="0"
             Grid.ColumnSpan="4"
             x:Name="MyMap"
-            IsShowingUser="true"
+            IsShowingUser="False"
             MapType="Hybrid" />
 
         <Label Grid.Row="1" Grid.Column="0"
             Text="出発地"
             VerticalOptions="Center"
-            HorizontalOptions="FillAndExpand" />
+            HorizontalOptions="FillAndExpand"
+            FontSize="12"/>
         <Entry Grid.Row="1" Grid.Column="1"
             Keyboard="Numeric"
-            Placeholder="lat"
-            x:Name="StartLat"
+            Placeholder="latitude"
+            x:Name="StartLatitude"
             VerticalOptions="Center"
-            HorizontalOptions="FillAndExpand"/>
+            HorizontalOptions="FillAndExpand"
+            FontSize="12"/>
         <Entry Grid.Row="1" Grid.Column="2"
             Keyboard="Numeric"
-            Placeholder="let"
-            x:Name="StartLet"
+            Placeholder="longitude"
+            x:Name="StartLongitude"
             VerticalOptions="Center"
-            HorizontalOptions="FillAndExpand"/>
+            HorizontalOptions="FillAndExpand"
+            FontSize="12"/>
         <Button Grid.Row="1" Grid.Column="3"
             Text="現在地"
             x:Name="CurrentLocation"
             VerticalOptions="Center"
-            HorizontalOptions="FillAndExpand"/>
+            HorizontalOptions="FillAndExpand"
+            FontSize="10"/>
 
         <Label Grid.Row="2" Grid.Column="0"
             Text="目的地"
             VerticalOptions="Center"
-            HorizontalOptions="FillAndExpand"/>
+            HorizontalOptions="FillAndExpand"
+            FontSize="12"/>
         <Entry Grid.Row="2" Grid.Column="1"
             Keyboard="Numeric"
-            Placeholder="lat"
-            x:Name="GoalLat"
+            Placeholder="latitude"
+            x:Name="GoalLatitude"
             VerticalOptions="Center"
-            HorizontalOptions="FillAndExpand"/>
+            HorizontalOptions="FillAndExpand"
+            FontSize="12"/>
         <Entry Grid.Row="2" Grid.Column="2"
             Keyboard="Numeric"
-            Placeholder="let"
-            x:Name="GoalLet"
+            Placeholder="longitude"
+            x:Name="GoalLongitude"
             VerticalOptions="Center"
-            HorizontalOptions="FillAndExpand"/>
+            HorizontalOptions="FillAndExpand"
+            FontSize="12"/>
         <Button Grid.Row="2" Grid.Column="3"
             Text="東京タワー"
             x:Name="TokyoTowerLocation"
             VerticalOptions="Center"
-            HorizontalOptions="FillAndExpand"/>
+            HorizontalOptions="FillAndExpand"
+            FontSize="10"/>
 
         <Button Grid.Row="3" Grid.Column="0"
             Grid.ColumnSpan="4"
             Text="ルート検索"
             x:Name="SearchRoute"
             VerticalOptions="Center"
-            HorizontalOptions="FillAndExpand"/>
+            HorizontalOptions="FillAndExpand"
+            FontSize="12"/>
     </Grid>
 </ContentPage>
