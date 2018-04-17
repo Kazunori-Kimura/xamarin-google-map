@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App1"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="App1.MainPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="20" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <maps:Map
+            Grid.Row="0" Grid.Column="0"
+            Grid.ColumnSpan="4"
+            x:Name="MyMap"
+            IsShowingUser="true"
+            MapType="Hybrid" />
+
+        <Label Grid.Row="1" Grid.Column="0"
+            Text="出発地"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand" />
+        <Entry Grid.Row="1" Grid.Column="1"
+            Keyboard="Numeric"
+            Placeholder="lat"
+            x:Name="StartLat"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
+        <Entry Grid.Row="1" Grid.Column="2"
+            Keyboard="Numeric"
+            Placeholder="let"
+            x:Name="StartLet"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
+        <Button Grid.Row="1" Grid.Column="3"
+            Text="現在地"
+            x:Name="CurrentLocation"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
+
+        <Label Grid.Row="2" Grid.Column="0"
+            Text="目的地"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
+        <Entry Grid.Row="2" Grid.Column="1"
+            Keyboard="Numeric"
+            Placeholder="lat"
+            x:Name="GoalLat"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
+        <Entry Grid.Row="2" Grid.Column="2"
+            Keyboard="Numeric"
+            Placeholder="let"
+            x:Name="GoalLet"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
+        <Button Grid.Row="2" Grid.Column="3"
+            Text="東京タワー"
+            x:Name="TokyoTowerLocation"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
+
+        <Button Grid.Row="3" Grid.Column="0"
+            Grid.ColumnSpan="4"
+            Text="ルート検索"
+            x:Name="SearchRoute"
+            VerticalOptions="Center"
+            HorizontalOptions="FillAndExpand"/>
+    </Grid>
+</ContentPage>
