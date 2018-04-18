@@ -27,7 +27,11 @@ namespace App1
 		{
 			InitializeComponent();
 
-            // 東京駅を表示
+            // 東京駅から東京タワーまで直線を描画
+            MyMap.RouteCoordinates.Add(MapInitialPosition); //東京駅
+            MyMap.RouteCoordinates.Add(TokyoTowerPosition); //東京タワー
+
+            // 東京駅を中央に表示
             MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(MapInitialPosition, MapDistance));
 
             StartLatitude.Text = "35.681298";

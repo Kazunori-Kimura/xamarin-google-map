@@ -19,12 +19,12 @@
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
-        <maps:Map
+        <local:CustomMap
             Grid.Row="0" Grid.Column="0"
             Grid.ColumnSpan="4"
             x:Name="MyMap"
             IsShowingUser="False"
-            MapType="Hybrid" />
+            MapType="Street" />
 
         <Label Grid.Row="1" Grid.Column="0"
             Text="出発地"
