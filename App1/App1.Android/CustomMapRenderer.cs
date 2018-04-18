@@ -3,6 +3,7 @@ using Android.Gms.Maps;
 using Android.Gms.Maps.Model;
 using App1;
 using App1.Droid;
+using System;
 using System.Collections.Generic;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
@@ -34,12 +35,27 @@ namespace App1.Droid
                 var map = (CustomMap)e.NewElement;
                 routeCoordinates = map.RouteCoordinates;
                 Control.GetMapAsync(this);
+
+                map.RouteUpdated += CustomMap_RouteUpdated;
             }
+        }
+
+        private void CustomMap_RouteUpdated(object sender, EventArgs e)
+        {
+            // ルート描画処理
+            this.RenderPolylines();
         }
 
         protected override void OnMapReady(GoogleMap map)
         {
             base.OnMapReady(map);
+
+            this.RenderPolylines();
+        }
+
+        private void RenderPolylines()
+        {
+            System.Diagnostics.Debug.WriteLine("Render Polylines");
 
             // 色指定
             var polylineOptions = new PolylineOptions();

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Xamarin.Forms.Maps;
 
 namespace App1
@@ -13,6 +14,13 @@ namespace App1
         public CustomMap()
         {
             RouteCoordinates = new List<Position>();
+        }
+
+        public event EventHandler RouteUpdated;
+
+        public virtual void OnRouteUpdated(EventArgs e)
+        {
+            RouteUpdated?.Invoke(this, e);
         }
     }
 }
