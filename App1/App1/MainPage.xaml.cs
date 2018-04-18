@@ -14,6 +14,11 @@ namespace App1
         private readonly Position MapInitialPosition = new Position(35.681298, 139.766247);
 
         /// <summary>
+        /// 東京タワーの位置
+        /// </summary>
+        private readonly Position TokyoTowerPosition = new Position(35.6585805, 139.7432442);
+
+        /// <summary>
         /// マップの表示距離
         /// </summary>
         private readonly Distance MapDistance = Distance.FromMiles(0.3);
@@ -29,7 +34,7 @@ namespace App1
             StartLongitude.Text = "139.766247";
 
             // Geolocatorのパーミッションチェック
-            ChackLocationPermissionStatusAsync(MyMap);
+            ChackLocationPermissionStatusAsync(MyMap).Wait();
 		}
 
         private async Task ChackLocationPermissionStatusAsync(Map map)
