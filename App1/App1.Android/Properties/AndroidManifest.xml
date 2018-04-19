@@ -9,6 +9,6 @@
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 	<uses-permission android:name="android.permission.INTERNET" />
 	<application android:label="App1.Android">
-		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyDixq6le6tn-TgrzUiusQDl6S-j_CvRYo0" />
+		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="===YOUR_API_KEY===" />
 	</application>
 </manifest>

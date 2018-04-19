@@ -32,7 +32,7 @@ namespace App1
         /// <summary>
         /// Google Maps Directions API Key
         /// </summary>
-        private readonly string DirectionsApiKey = "AIzaSyDUJ68Z2-_ucApMQsvYko4gIg7GxxaL8o0";
+        private readonly string DirectionsApiKey = "===YOUR_API_KEY===";
 
         /// <summary>
         /// Google Maps Directions API URL base
